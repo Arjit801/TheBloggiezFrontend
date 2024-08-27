@@ -58,6 +58,7 @@ const CreateBlog = () => {
         { ...body },
         {
           withCredentials: true,
+          headers: { "content-type": "multipart/form-data" }
         }
       )
       .then(function (response) {
