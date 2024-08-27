@@ -54,7 +54,7 @@ const CreateBlog = () => {
     };
     axios
       .post(
-        `${process.env.THE_BLOGGIES_BACKEND_URL}/api/post`,
+        `https://thebloggiesbackend-production.up.railway.app/api/post`,
         { ...body },
         {
           withCredentials: true,
@@ -102,7 +102,7 @@ const CreateBlog = () => {
       headers: { "content-type": "multipart/form-data" },
       withCredentials: true,
     };
-    let url = `${process.env.THE_BLOGGIES_BACKEND_URL}/api/upload-images`;
+    let url = `https://thebloggiesbackend-production.up.railway.app/api/upload-images`;
 
     axios
       .post(url, formData, config)

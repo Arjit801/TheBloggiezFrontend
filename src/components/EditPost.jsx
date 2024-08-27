@@ -34,7 +34,7 @@ const EditPost = () => {
   const singleBlog = () => {
     axios
       .get(
-        `${process.env.THE_BLOGGIES_BACKEND_URL}/api/getallpost/${id}`,
+        `https://thebloggiesbackend-production.up.railway.app/api/getallpost/${id}`,
         //{},
         {
           withCredentials: true,
@@ -75,7 +75,7 @@ const EditPost = () => {
     };
     axios
       .put(
-        `${process.env.THE_BLOGGIES_BACKEND_URL}/api/updatepost/${id}`,
+        `https://thebloggiesbackend-production.up.railway.app/api/updatepost/${id}`,
         { ...body },
         {
           withCredentials: true,

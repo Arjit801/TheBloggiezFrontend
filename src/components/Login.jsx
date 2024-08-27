@@ -38,7 +38,7 @@ const Login = () => {
     };
     axios
       .post(
-        `${process.env.THE_BLOGGIES_BACKEND_URL}/api/login`,
+        `https://thebloggiesbackend-production.up.railway.app/api/login`,
         { ...body },
         {
           withCredentials: true,

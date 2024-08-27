@@ -8,7 +8,7 @@ const Navbar = () => {
   const logOut = () => {
     axios
       .post(
-        `${process.env.THE_BLOGGIES_BACKEND_URL}/api/logout`,
+        `https://thebloggiesbackend-production.up.railway.app/api/logout`,
         {},
         {
           withCredentials: true,

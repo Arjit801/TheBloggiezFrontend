@@ -8,7 +8,7 @@ const BlogPost = () => {
     setLoading(true);
     axios
       .get(
-        `${process.env.THE_BLOGGIES_BACKEND_URL}/api/getallpost`,
+        `https://thebloggiesbackend-production.up.railway.app/api/getallpost`,
         //{},
         {
           withCredentials: true,
