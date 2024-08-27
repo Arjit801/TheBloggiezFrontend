@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useSnackbar } from "react-simple-snackbar";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+
 const PersonalBlog = () => {
   const [blogData, setBlogData] = useState();
   const [loading, setLoading] = useState(false);
+  const { id } = useParams();
   const [deleteLoading, setDeleteLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -28,7 +30,7 @@ const PersonalBlog = () => {
     setLoading(true);
     axios
       .get(
-        `https://thebloggiesbackend-production.up.railway.app/api/uniquepost`,
+        `https://thebloggiesbackend-production.up.railway.app/api/uniquepost/${id}`,
 
         {
           withCredentials: true,

@@ -63,7 +63,8 @@ const CreateBlog = () => {
       .then(function (response) {
         // handle success
         setLoading(false);
-        navigate("/home");
+        localStorage.setItem("blog", JSON.stringify(response?.data));
+        navigate("/personal");
       })
       .catch(function (error) {
         setLoading(false);
