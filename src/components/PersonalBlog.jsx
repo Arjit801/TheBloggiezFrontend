@@ -34,9 +34,7 @@ const PersonalBlog = () => {
 
         {
           withCredentials: true,
-          headers: {
-            Authorization: "TOKEN",
-          },
+          headers: { "content-type": "application/json" },
         }
       )
       .then(function (response) {

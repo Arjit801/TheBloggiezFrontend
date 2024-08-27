@@ -58,9 +58,7 @@ const CreateBlog = () => {
         { ...body },
         {
           withCredentials: true,
-          headers: {
-            Authorization: "TOKEN",
-          },
+          headers: { "content-type": "application/json" },
         }
       )
       .then(function (response) {
@@ -103,9 +101,7 @@ const CreateBlog = () => {
     formData.append("name", imageUpload.name);
 
     const config = {
-      headers: {
-        Authorization: "TOKEN",
-      },
+      headers: { "content-type": "application/json" },
       withCredentials: true,
     };
     let url = `https://thebloggiesbackend-production.up.railway.app/api/upload-images`;
