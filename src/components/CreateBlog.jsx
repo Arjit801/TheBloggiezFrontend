@@ -58,7 +58,9 @@ const CreateBlog = () => {
         { ...body },
         {
           withCredentials: true,
-          headers: { "content-type": "application/json" },
+          headers: {
+            Authorization: `Bearer ${userData.token}`, // Replace with actual token
+          },
         }
       )
       .then(function (response) {
