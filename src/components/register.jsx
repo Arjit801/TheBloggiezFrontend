@@ -33,7 +33,7 @@ const Register = () => {
   const onSubmit = (data) => {
     setLoading(true);
     axios
-      .post(`${process.env.THE_BLOGGIES_BACKEND_URL}/api/register`, { ...data })
+      .post(`https://thebloggiesbackend-production.up.railway.app/api/register`, { ...data })
       .then(function (response) {
         // handle success
         setLoading(false);
