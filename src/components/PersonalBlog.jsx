@@ -47,7 +47,7 @@ const PersonalBlog = () => {
         setLoading(false);
         //   setMessage(error?.response?.data?.message);
         //   openSnackbar(error?.response?.data?.message);
-        //console.log(error?.response?.data?.message);
+        console.log(error?.response?.data?.message);
       })
       .then(function () {
         // always executed
@@ -70,6 +70,10 @@ const PersonalBlog = () => {
 
         {
           withCredentials: true,
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+          },
         }
       )
       .then(function (response) {

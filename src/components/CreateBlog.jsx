@@ -59,15 +59,15 @@ const CreateBlog = () => {
         {
           withCredentials: true,
           headers: {
-            Authorization: `Bearer ${userData.token}`, // Replace with actual token
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
           },
         }
       )
       .then(function (response) {
         // handle success
         setLoading(false);
-        localStorage.setItem("blog", JSON.stringify(response?.data));
-        navigate("/personal");
+        navigate("/home");
       })
       .catch(function (error) {
         setLoading(false);
@@ -103,7 +103,7 @@ const CreateBlog = () => {
     formData.append("name", imageUpload.name);
 
     const config = {
-      headers: { "content-type": "application/json" },
+      headers: { "content-type": "multipart/form-data" },
       withCredentials: true,
     };
     let url = `https://thebloggiesbackend-production.up.railway.app/api/upload-images`;
