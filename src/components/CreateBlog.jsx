@@ -58,10 +58,7 @@ const CreateBlog = () => {
         { ...body },
         {
           withCredentials: true,
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-            "Content-Type": "application/json",
-          },
+          headers: { "content-type": "multipart/form-data" },
         }
       )
       .then(function (response) {
