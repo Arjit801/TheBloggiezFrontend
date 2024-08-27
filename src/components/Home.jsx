@@ -25,8 +25,8 @@ const Home = () => {
               Welcome to my site!
             </h2>
             <p className="mt-3 text-white sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo.
+              TheBloggies is blog website, Where you can read blogs on different topics to increase your knowledge base. 
+              Reading a blog daily will help you to keep in touch with outside world and with the new technologies.
             </p>
             <div className="mt-5 sm:mt-8 sm:flex justify-center">
               <div className="rounded-md shadow">
