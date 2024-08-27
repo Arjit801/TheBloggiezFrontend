@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 const PersonalBlog = () => {
   const [blogData, setBlogData] = useState();
   const [loading, setLoading] = useState(false);
+  const { id } = useParams();
   const [deleteLoading, setDeleteLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -28,7 +29,7 @@ const PersonalBlog = () => {
     setLoading(true);
     axios
       .get(
-        `${process.env.THE_BLOGGIES_BACKEND_URL}/api/uniquepost/${id}`,
+        `${process.env.THE_BLOGGIES_BACKEND_URL}/api/uniquepost`,
 
         {
           withCredentials: true,
